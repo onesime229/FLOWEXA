@@ -1,0 +1,553 @@
+{
+  "timestamp": "2026-09-12T08:20:39.867Z",
+  "total": 76,
+  "passed": 76,
+  "failed": 0,
+  "successRate": "100.0%",
+  "decision": "GO",
+  "results": [
+    {
+      "sectionNum": 1,
+      "sectionTitle": "Audit Global",
+      "testId": "T1.1",
+      "name": "Serveur Backend actif & santé OK",
+      "passed": true,
+      "message": "",
+      "measuredMetric": "19ms"
+    },
+    {
+      "sectionNum": 1,
+      "sectionTitle": "Audit Global",
+      "testId": "T1.2",
+      "name": "DataStore intègre (Users, Entreprises, Demandes présents)",
+      "passed": true
+    },
+    {
+      "sectionNum": 1,
+      "sectionTitle": "Audit Global",
+      "testId": "T1.3",
+      "name": "Métriques d’audit en temps réel exposées",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.1",
+      "name": "Inscription client (201 Created)",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.2",
+      "name": "Connexion valide (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.3",
+      "name": "Rejet mot de passe erroné (401 Unauthorized)",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.4",
+      "name": "Rafraîchissement de jeton JWT (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.5",
+      "name": "Déconnexion utilisateur (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 2,
+      "sectionTitle": "Authentification",
+      "testId": "T2.6",
+      "name": "Révocation immédiate JWT pour compte suspendu",
+      "passed": true
+    },
+    {
+      "sectionNum": 3,
+      "sectionTitle": "Rôles",
+      "testId": "T3.1",
+      "name": "SUPER_ADMIN accès route admin (/api/v1/admin/audit-logs: 200)",
+      "passed": true
+    },
+    {
+      "sectionNum": 3,
+      "sectionTitle": "Rôles",
+      "testId": "T3.2",
+      "name": "CLIENT bloqué sur route admin (403 Forbidden)",
+      "passed": true
+    },
+    {
+      "sectionNum": 3,
+      "sectionTitle": "Rôles",
+      "testId": "T3.3",
+      "name": "BUSINESS_OWNER accès cockpit pro (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 3,
+      "sectionTitle": "Rôles",
+      "testId": "T3.4",
+      "name": "MANAGER autorisé sur les données de son entreprise",
+      "passed": true
+    },
+    {
+      "sectionNum": 3,
+      "sectionTitle": "Rôles",
+      "testId": "T3.5",
+      "name": "EMPLOYEE autorisé sur le périmètre opérationnel de son entreprise",
+      "passed": true
+    },
+    {
+      "sectionNum": 4,
+      "sectionTitle": "Multi-Tenant",
+      "testId": "T4.1",
+      "name": "Tenant A consulte ses propres données (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 4,
+      "sectionTitle": "Multi-Tenant",
+      "testId": "T4.2",
+      "name": "Tenant A bloqué sur données de Tenant B (403 Forbidden)",
+      "passed": true
+    },
+    {
+      "sectionNum": 4,
+      "sectionTitle": "Multi-Tenant",
+      "testId": "T4.3",
+      "name": "Tenant B consulte ses propres données (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 4,
+      "sectionTitle": "Multi-Tenant",
+      "testId": "T4.4",
+      "name": "Tenant B bloqué sur données de Tenant A (403 Forbidden)",
+      "passed": true
+    },
+    {
+      "sectionNum": 5,
+      "sectionTitle": "IDOR",
+      "testId": "T5.2",
+      "name": "IDOR Client : Client bloqué sur consultation demande d’un autre client (403/404)",
+      "passed": true
+    },
+    {
+      "sectionNum": 6,
+      "sectionTitle": "Entreprises",
+      "testId": "T6.1",
+      "name": "Consultation fiche entreprise publique (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 6,
+      "sectionTitle": "Entreprises",
+      "testId": "T6.2",
+      "name": "Horaires d’ouverture & statut is_open_now calculé sans mock",
+      "passed": true
+    },
+    {
+      "sectionNum": 7,
+      "sectionTitle": "Clients",
+      "testId": "T7.1",
+      "name": "Profil client authentifié (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.1",
+      "name": "Recherche par mot clé et localisation (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.2-1km",
+      "name": "Recherche rayon spatial 1 km",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.2-3km",
+      "name": "Recherche rayon spatial 3 km",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.2-5km",
+      "name": "Recherche rayon spatial 5 km",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.2-10km",
+      "name": "Recherche rayon spatial 10 km",
+      "passed": true
+    },
+    {
+      "sectionNum": 8,
+      "sectionTitle": "Recherche",
+      "testId": "T8.3",
+      "name": "Filtre \"ouvert maintenant\" fonctionnel",
+      "passed": true
+    },
+    {
+      "sectionNum": 9,
+      "sectionTitle": "Géolocalisation",
+      "testId": "T9.1",
+      "name": "Coordonnées invalides gérées par fallback sécurisé (zéro crash)",
+      "passed": true
+    },
+    {
+      "sectionNum": 10,
+      "sectionTitle": "Demandes",
+      "testId": "T10.1",
+      "name": "Création d’une demande client (201 Created)",
+      "passed": true
+    },
+    {
+      "sectionNum": 10,
+      "sectionTitle": "Demandes",
+      "testId": "T10.2",
+      "name": "Rejet de la demande par l’entreprise (200 OK)",
+      "passed": true
+    },
+    {
+      "sectionNum": 10,
+      "sectionTitle": "Demandes",
+      "testId": "T10.3",
+      "name": "Transition interdite bloquée (REJECTED -> ACCEPTED = 400 TRANSITION_FORBIDDEN)",
+      "passed": true
+    },
+    {
+      "sectionNum": 11,
+      "sectionTitle": "Réservations",
+      "testId": "T11.1",
+      "name": "Réservation initiale enregistrée (201 Created)",
+      "passed": true
+    },
+    {
+      "sectionNum": 11,
+      "sectionTitle": "Réservations",
+      "testId": "T11.2",
+      "name": "Collision de dates concurrente bloquée (409 ROOM_ALREADY_BOOKED)",
+      "passed": true
+    },
+    {
+      "sectionNum": 12,
+      "sectionTitle": "Rendez-vous",
+      "testId": "T12.1",
+      "name": "Prise de rendez-vous enregistrée (201 Created)",
+      "passed": true
+    },
+    {
+      "sectionNum": 13,
+      "sectionTitle": "Favoris",
+      "testId": "T13.1",
+      "name": "Ajout aux favoris (200/201)",
+      "passed": true
+    },
+    {
+      "sectionNum": 13,
+      "sectionTitle": "Favoris",
+      "testId": "T13.2",
+      "name": "Consultation de ses favoris par le client",
+      "passed": true
+    },
+    {
+      "sectionNum": 14,
+      "sectionTitle": "Avis",
+      "testId": "T14.1",
+      "name": "Rejet dépôt d’avis arbitraire sans réservation/demande (400 Bad Request)",
+      "passed": true
+    },
+    {
+      "sectionNum": 15,
+      "sectionTitle": "Messagerie",
+      "testId": "T15.1",
+      "name": "Création d’un fil de discussion (200/201)",
+      "passed": true
+    },
+    {
+      "sectionNum": 15,
+      "sectionTitle": "Messagerie",
+      "testId": "T15.2",
+      "name": "Envoi message par participant (200/201)",
+      "passed": true
+    },
+    {
+      "sectionNum": 15,
+      "sectionTitle": "Messagerie",
+      "testId": "T15.3",
+      "name": "Non-participant bloqué en lecture (403 Forbidden)",
+      "passed": true
+    },
+    {
+      "sectionNum": 16,
+      "sectionTitle": "Notifications",
+      "testId": "T16.1",
+      "name": "Notification générée sur événement réel",
+      "passed": true
+    },
+    {
+      "sectionNum": 17,
+      "sectionTitle": "Anti-Duplication",
+      "testId": "T17.1",
+      "name": "Anti-duplication : notification identique bloquée",
+      "passed": true
+    },
+    {
+      "sectionNum": 18,
+      "sectionTitle": "Email Provider",
+      "testId": "T18.1",
+      "name": "Statut sincère provider Email (aucun faux succès déclaré)",
+      "passed": true
+    },
+    {
+      "sectionNum": 19,
+      "sectionTitle": "SMS Provider",
+      "testId": "T19.1",
+      "name": "Statut sincère provider SMS (GATEWAY)",
+      "passed": true
+    },
+    {
+      "sectionNum": 20,
+      "sectionTitle": "WhatsApp Provider",
+      "testId": "T20.1",
+      "name": "Statut sincère provider WhatsApp (Meta Cloud API)",
+      "passed": true
+    },
+    {
+      "sectionNum": 21,
+      "sectionTitle": "CommunicationLog",
+      "testId": "T21.1",
+      "name": "Communication tracée avec statut contrôlé (PENDING/FAILED)",
+      "passed": true
+    },
+    {
+      "sectionNum": 22,
+      "sectionTitle": "Retry",
+      "testId": "T22.1",
+      "name": "Nombre de retries borné (maxRetries = 3)",
+      "passed": true
+    },
+    {
+      "sectionNum": 23,
+      "sectionTitle": "Campagnes",
+      "testId": "T23.1",
+      "name": "Gestion du consentement et préférences utilisateur",
+      "passed": true
+    },
+    {
+      "sectionNum": 24,
+      "sectionTitle": "Paiements",
+      "testId": "T24.1",
+      "name": "Rejet paiement sans réservation valide (400 Bad Request)",
+      "passed": true
+    },
+    {
+      "sectionNum": 26,
+      "sectionTitle": "Webhooks",
+      "testId": "T26.1",
+      "name": "Rejet cryptographique webhook signature falsifiée (401 Unauthorized)",
+      "passed": true
+    },
+    {
+      "sectionNum": 28,
+      "sectionTitle": "Cache",
+      "testId": "T28.1",
+      "name": "Service de cache mémoire actif avec tags et statistiques",
+      "passed": true
+    },
+    {
+      "sectionNum": 30,
+      "sectionTitle": "Pagination",
+      "testId": "T30.1",
+      "name": "Pagination page 1 respecte la limite (2 éléments)",
+      "passed": true
+    },
+    {
+      "sectionNum": 30,
+      "sectionTitle": "Pagination",
+      "testId": "T30.2",
+      "name": "Plafonnement strict de la taille de page (<= 100 max)",
+      "passed": true
+    },
+    {
+      "sectionNum": 32,
+      "sectionTitle": "Upload",
+      "testId": "T32.1",
+      "name": "Rejet format exécutable/non autorisé (MIME validation)",
+      "passed": true
+    },
+    {
+      "sectionNum": 32,
+      "sectionTitle": "Upload",
+      "testId": "T32.2",
+      "name": "Rejet image dépassant le budget de 5 Mo",
+      "passed": true
+    },
+    {
+      "sectionNum": 32,
+      "sectionTitle": "Upload",
+      "testId": "T32.3",
+      "name": "Acceptation image valide (WebP/PNG/JPEG < 5Mo)",
+      "passed": true
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-MT-01",
+      "name": "Isolation stricte multi-tenant inter-entreprises",
+      "passed": true,
+      "message": "Rejet automatique avec motif : \"Violation de l’isolation multi-tenant : cette ressource appartient à un autre établissement.\""
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-IDOR-01",
+      "name": "Protection contre l’accès direct aux objets (IDOR Client)",
+      "passed": true,
+      "message": "Rejet 403 avec motif : \"Accès interdit. Vous ne pouvez consulter que vos propres données.\""
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-AUTH-01",
+      "name": "Révocation immédiate des jetons d’un compte suspendu",
+      "passed": true,
+      "message": "Le token d’accès a été rejeté conformément aux exigences B31."
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-RATE-01",
+      "name": "Limitation de débit & protection anti-brute force",
+      "passed": true,
+      "message": "Blocage 429 Too Many Requests activé avec temporisation."
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-XSS-01",
+      "name": "Neutralisation des vecteurs XSS et injections HTML",
+      "passed": true,
+      "message": "Payload assaini : \"Salon Beauté\" | \"<img src=\"x\" >Prestation de qualité\""
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-FILE-01",
+      "name": "Filtrage strict des types de fichiers et protection Path Traversal",
+      "passed": true,
+      "message": "Validation MIME type et génération de nom de stockage avec UUID aléatoire sans chemin relatif."
+    },
+    {
+      "sectionNum": 33,
+      "sectionTitle": "Sécurité",
+      "testId": "TEST-WEBHOOK-01",
+      "name": "Vérification cryptographique et idempotence des Webhooks (Kkiapay/MoMo)",
+      "passed": true,
+      "message": "Adapter Kkiapay et MTN MoMo vérifiés avec rejet immédiat 401 si signature altérée."
+    },
+    {
+      "sectionNum": 34,
+      "sectionTitle": "Codes HTTP",
+      "testId": "T34.1",
+      "name": "Route inexistante produit 404 Not Found",
+      "passed": true
+    },
+    {
+      "sectionNum": 34,
+      "sectionTitle": "Codes HTTP",
+      "testId": "T34.2",
+      "name": "Route protégée sans token produit 401 Unauthorized",
+      "passed": true
+    },
+    {
+      "sectionNum": 34,
+      "sectionTitle": "Codes HTTP",
+      "testId": "T34.3",
+      "name": "Route admin sans privilège produit 403 Forbidden",
+      "passed": true
+    },
+    {
+      "sectionNum": 35,
+      "sectionTitle": "Validation",
+      "testId": "T35.1",
+      "name": "Rejet mot de passe trop court (<6 caractères: 400 Bad Request)",
+      "passed": true
+    },
+    {
+      "sectionNum": 38,
+      "sectionTitle": "Charge Concurrente",
+      "testId": "T38.1",
+      "name": "50 requêtes concurrentes traitées en 93ms (moyenne: 1.86ms/req)",
+      "passed": true,
+      "message": "",
+      "measuredMetric": "1.86ms"
+    },
+    {
+      "sectionNum": 47,
+      "sectionTitle": "Logs Audit",
+      "testId": "T47.1",
+      "name": "Journalisation des opérations sensibles",
+      "passed": true
+    },
+    {
+      "sectionNum": 47,
+      "sectionTitle": "Logs Audit",
+      "testId": "T47.2",
+      "name": "Protection des secrets : aucun mot de passe ou secret en clair dans les logs",
+      "passed": true
+    },
+    {
+      "sectionNum": 48,
+      "sectionTitle": "Multi-Tenant Croisé",
+      "testId": "T48.1",
+      "name": "Accès intra-tenant autorisé (Tenant A -> Données A)",
+      "passed": true
+    },
+    {
+      "sectionNum": 48,
+      "sectionTitle": "Multi-Tenant Croisé",
+      "testId": "T48.2",
+      "name": "Accès inter-tenant strictement bloqué (Tenant A -> Données B)",
+      "passed": true
+    },
+    {
+      "sectionNum": 52,
+      "sectionTitle": "Architecture Unique",
+      "testId": "T52.1",
+      "name": "Unicité de NotificationService (Singleton)",
+      "passed": true
+    },
+    {
+      "sectionNum": 52,
+      "sectionTitle": "Architecture Unique",
+      "testId": "T52.2",
+      "name": "Unicité de CommunicationService (Singleton)",
+      "passed": true
+    },
+    {
+      "sectionNum": 52,
+      "sectionTitle": "Architecture Unique",
+      "testId": "T52.3",
+      "name": "Unicité de CacheService (Singleton)",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+"""
+Flowexa Django Settings package.
+"""

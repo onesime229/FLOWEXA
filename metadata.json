@@ -1,0 +1,6 @@
+{
+  "name": "FLOWEXA",
+  "description": "Plateforme SaaS multiservices multi-tenant pour la gestion d'activités professionnelles et la recherche intelligente de services.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
